@@ -1,0 +1,347 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: roboto;
+    color: #03151E;
+
+}
+
+.appContainer{
+    display: grid;
+    grid-template-columns: 300px 4fr;
+    grid-template-rows:  100vh;
+}
+
+.logo{
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 40px 0;
+}
+
+.nav{
+    background: #F6F6F6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    height: 100%;
+    width: 300px;
+    grid-column: 1/2;
+}
+
+.menu > li{
+    list-style-type: none;
+    padding: 20px 0;
+}
+
+
+
+
+.menu{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    text-align: center;
+
+}
+.menu > li:hover{
+    background: white;
+}
+
+.current{
+    background: white; 
+}
+
+/* library page */
+
+.search svg{
+    width: 35px;
+    height: auto;
+}
+
+.search{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    grid-column: 1/2;
+    margin-left: 40px;
+    margin-top: 40px;
+}
+
+.search > form{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+
+}
+
+.search input{
+    border: none;
+    font-size: 20px;
+}
+
+.search input:focus{
+    outline: none;
+}
+.account{
+    background: #F6F6F6;
+    display: flex;
+    gap: 60px;
+    width: fit-content;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 100px;
+    padding-left: 20px;
+    align-self: center;
+    margin-top: 40px;
+    margin-right: 40px;
+}
+
+.account > .icon{
+    background: #4BC1D2;
+    width: 60px;
+    height: 60px;
+    border-radius: 40px;
+}
+
+.account h3{
+    font-size: 12px;
+}
+
+.divider{
+    background: #EEEEEF;
+    height: 20px;
+    width: 600px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    margin-left: 40px;
+
+}
+
+.bookContainer{
+    border-top: 1px solid grey;
+    grid-column: 1/3;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 40px;
+    row-gap:  30px;
+}
+
+.book > .img{
+    background: rgb(255, 235, 145);
+    width: 250px;
+    height: 300px;
+
+}
+
+.book > .img:hover{
+    cursor: pointer;
+}
+
+.book > h1 {
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.book > h2{
+    font-size: 20px;
+    font-weight: 300;
+}
+
+.book{
+    text-align: center;
+    width: fit-content;
+}
+
+.main{
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    grid-template-rows: 1fr 1fr 10fr;
+    row-gap: 40px;
+    grid-column: 2/3;
+}
+
+#addBook{
+    background: #4BC1D2;
+    height: 60px;
+    margin-right: 40px;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    border-radius: 15px;
+}
+
+#addBook:hover{
+    opacity: .9;
+}
+
+
+.header{
+    border-bottom: 2px solid black;
+}
+
+.addBookModule, .bookInfoModule{
+    width: inherit;
+    height: 100%;
+    margin-left: 300px;
+    border: none;
+}
+
+.addHeader{
+    margin-left: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 20px;
+    margin-top: 50px;
+}
+
+.addHeader div:first-child{
+    display: flex;
+    justify-content: space-between;
+}
+
+#closeButtonAdd, #closeButtonInfo{
+    background: red;
+    border: none;
+    padding: 10px 20px;
+    margin-right: 40px;
+    color: white;
+    border-radius: 100px;
+}
+
+
+#closeButtonAdd:hover, #closeButtonInfo:hover{
+    opacity: .4;
+}
+
+
+.addHeader > h2 {
+    font-size: 20px;
+}
+
+.line{
+    border: 1px solid #DEDEDE;
+}
+
+fieldset{
+    border: none;
+}
+#genreSet, #infoSet, #addForm > button{
+    margin-left: 40px;
+}
+
+#genreSet{
+    margin-bottom: 20px;
+}
+
+#genreSet > legend{
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+
+#infoSet{
+    display: flex;
+    flex-direction: column;
+    padding-right: 40px;
+}
+
+#infoSet input{
+    height: 30px;
+    border: 1px solid #DEDEDE;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+
+#infoSet > #description{
+    height: 180px;
+}
+
+#infoSet > #pages{
+    width: 200px;
+}
+
+#infoSet label{
+    font-size: 15px;
+}
+
+#addForm > button{
+    background: #4BC1D2;
+    border: none;
+    padding: 10px 30px;
+    color: white;
+    font-size: 20px;
+}
+
+
+.bookInfoModule{
+    display: grid;
+    grid-template-rows: 1fr 9fr;
+}
+.bookInfoHeader{
+    box-shadow: 10px 5px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.bookInfoImg{
+    background: rgb(255, 235, 145);
+    width: 400px;
+    height: 500px;
+}
+
+.bookInfoMain{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    margin-top: 100px;
+    column-gap: 40px;
+    padding: 0 60px;
+}
+
+.bookInfoText > h1{
+    font-size: 3rem;
+}
+
+.bookInfoText > h2{
+    font-size: 1rem;
+    color: #8A8A8A;
+    margin-bottom: 20px;
+}
+.bookInfoText > ul{
+    list-style-type: none;
+    margin-bottom: 40px;
+}
+
+.bookInfoText{
+    display: flex;
+    flex-direction: column;
+    height: 500px;
+}
+
+
+.bookInfoText button{
+    margin-top: auto;
+    border: none;
+    background: none;
+    align-self: center;
+    color: red;
+    font-size: 15px;
+
+}
+
+

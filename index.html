@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <script  src="./script.js" defer></script>
+    <title>Just a Book App</title>
+</head>
+<body>
+    <div class="appContainer">
+        <div class="nav">
+            <div class="logo">BookTrackr</div> 
+            <ul class="menu">
+                <li class="current" id="lib">Library</li>
+                <!-- <li id="add">Add Book</li> -->
+            </ul>
+        </div>
+
+        <div class="main">
+            <div class="search">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>magnify</title><path d="M9.5,3A6.5,6.5 0 0,1 16,9.5C16,11.11 15.41,12.59 14.44,13.73L14.71,14H15.5L20.5,19L19,20.5L14,15.5V14.71L13.73,14.44C12.59,15.41 11.11,16 9.5,16A6.5,6.5 0 0,1 3,9.5A6.5,6.5 0 0,1 9.5,3M9.5,5C7,5 5,7 5,9.5C5,12 7,14 9.5,14C12,14 14,12 14,9.5C14,7 12,5 9.5,5Z" /></svg>
+                <form id="search" action="">
+                    <input id="searchInput" class="searchField" placeholder="Search Library" type="text">
+                </form>
+            </div>
+
+            <div class="account">
+                <div>
+                    <h2>Julius</h2>
+                    <h3>Account</h3>
+                </div>
+                <div class="icon"></div>
+            </div>
+
+            <div class="divider">
+                <h1>All Books</h1>
+            </div> 
+
+            <button id="addBook">Add Book</button>
+
+
+            <div class="bookContainer">
+
+            </div>
+        </div>
+
+
+        <dialog class="addBookModule">
+                    <div class="addBookContainer">
+                        <div class="addHeader">
+                            <div>
+                                <h1>Add Book</h1>
+                                <button id="closeButtonAdd">X</button>
+                            </div>
+
+                            <h2>Manual Entry</h2>
+                            <span class="line">
+                            </span>
+                        </div>
+
+                        <form id="addForm" action="">
+                            <fieldset id="genreSet">
+                                <legend>Book Genre</legend>
+                                <input value="non" name="genre" id="Non-Fiction" type="radio" checked>
+                                <label for="Non-Fiction">Non-Fiction</label>
+            
+                                <input value="mystery" name="genre" id="mystery" type="radio">
+                                <label for="mystery">Mystery</label>
+            
+                                <input value="Romance" name="genre" id="Romance" type="radio">
+                                <label for="Romance">Romance</label>
+            
+                                <input value="Fantasy" name="genre" id="Fantasy" type="radio">
+                                <label for="Fantasy">Fantasy</label>
+                            </fieldset>
+
+                            <fieldset id="infoSet">
+                                <label  for="title">Title</label>
+                                <input required name="title" id="title" type="text">
+
+                                <label for="author">Author</label>
+                                <input required name="author"  id="author" type="text">
+
+                                <label for="description">Description</label>
+                                <textarea  required name="description" id="description"></textarea>
+                                
+                                <label for="publisher">Publisher</label>
+                                <input required name="publisher"  id="publisher" type="text">
+
+                                <label for="pages">Pages</label>
+                                <input required name="pages"  id="pages" type="number">
+                            </fieldset>
+
+                            <button>Add Book</button>
+                        </form>
+                    </div>
+        </dialog>
+
+        <dialog class="bookInfoModule">
+            <div class="bookInfoHeader">
+                <button id="closeButtonInfo">X</button>
+            </div>
+
+            <div class="bookInfoMain">
+                <div class="bookInfoImg"></div>
+                <div class="bookInfoText">
+                    <h1 id="bookInfoTitle"></h1>
+                    <h2 id="bookInfoAuthor">author</h2>
+                    <ul>
+                        <li><b>Pages:</b> <span id="bookInfoPages"></span></li>
+                        <li><b>Genre:</b> <span id="bookInfoGenre"></span></li>
+                        <li><b>Publisher:</b> <span id="bookInfoPub"></span></li>
+                    </ul>
+                    <div>
+                        <h2>Description</h2>
+                        <p id="bookInfoDes">
+                        </p>
+                    </div>
+
+                   <button id="deleteButtton">Delete</button>
+
+                </div>
+
+            </div>
+        </dialog>
+    </div>
+</body>
+</html>
